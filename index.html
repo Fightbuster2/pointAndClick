@@ -1,15 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Point and Click adventure</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Shrikhand&display=swap"
+        rel="stylesheet">
+    <title>point and click adventure</title>
 </head>
+
 <body>
-    hello world
-    <h1 id="mainTitle"></h1>
+    <div id="title">
+        <h1 id="mainTitle"></h1>
+    </div>
+    <div id="gameWindow">
+        <!--dialog bar-->
+        <div id="dialogBar" class="foreground">
+            <div id="setMainDialog">
+                <img id="hero" class="foreground" src="./img/Spook_Pac_Man.png" alt="portrait">
+                <div id="mainCharacterSpeech" class="foreground speech-bubble">...</div>
+
+                <div id="counterSpeech" class="foreground speech-bubble">...</div>
+                <img id="counterCharacter" class="foreground" src="./img/Ghost_Pacman.png" alt="The other person">
+                <div id="brownBar"></div>
+            </div>
+        </div>
+
+        <!-- inventory -->
+        <div id="invetoryBox" class="foreground">
+            <p>Inventory</p>
+            <ul id="inventoryList">
+
+            </ul>
+        </div>
+
+
+        <!--Foreground-->
+        <div id="signToLeft" class="foreground"></div>
+        <div id="door1" class="foreground"></div>
+        <div id="door2" class="foreground"></div>
+        <div id="statue" class="foreground"></div>
+        <div id="grave" class="foreground"></div>
+
+
+        <!-- Character -->
+        <div id="mainCharacter" class="character">
+            <img src="./img/pacman.png" alt="main character">
+        </div>
+
+
+        <!-- Background -->
+        <div id="tilemap" class="background">
+            <img draggable="false" src="./img/Tilemap.png" alt="tilemap 1">
+        </div>
+    </div>
+
+    <audio id="characterAudio">
+        <source src="audio/Gibberish - Sound Effect_01.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="counterAudio">
+        <source src="audio/high pitch voice.mp3" type="audio/mpeg">
+    </audio>
     <script src="js/index.js"></script>
 </body>
+
 </html>
